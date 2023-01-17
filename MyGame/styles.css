@@ -1,0 +1,32 @@
+body{
+}
+#demo{
+    font-size: 3rem;
+    color: white;
+}
+#myApp{
+    width: 800px;
+    margin: auto;
+    height: 600px;
+    position: relative;
+    background-image: url('img/space-back.jpg');
+    background-repeat: no-repeat;   
+    overflow: hidden;
+}
+#player{
+    position: absolute;
+    width: 120px;   
+}
+
+.asteroid{
+    position: absolute;
+    width: 110px; 
+}
+.fire{
+    position: absolute;
+    width: 25px; 
+}
+.destroyed{
+    position: absolute;
+    width: 100px; 
+}

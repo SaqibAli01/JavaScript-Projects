@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Calculator</h1>
+        <div class="result">
+            <input type="text" id="result">
+        </div>
+        <div class="btn">
+            <button class="btn third" onclick="off()"   id="resultbtn">OFF</button>
+            <button class="btn third" onclick="on()" id="resultbtn">ON</button>
+            <button class="btn third" onclick="clearResult()" id="resultbtn">Clear</button>
+            
+
+        </div>
+        <div class="btn">
+            <button class="btn third" onclick="addnum('7')" id="btn">7</button>
+            <button class="btn third" onclick="addnum('8')" id="btn">8</button>
+            <button class="btn third" onclick="addnum('9')" id="btn">9</button>
+            <button class="btn third" onclick="addnum('/')" id="btn">/</button>
+        </div>
+
+        <div class="btn">
+            <button class="btn third" onclick="addnum('4')" id="btn">4</button>
+            <button class="btn third" onclick="addnum('5')" id="btn">5</button>
+            <button class="btn third" onclick="addnum('6')" id="btn">6</button>
+            <button class="btn third" onclick="addnum('*')" id="btn">*</button>
+            
+        </div>
+
+        <div class="btn">
+            <button class="btn third" onclick="addnum('1')" id="btn">1</button>
+            <button class="btn third" onclick="addnum('2')" id="btn">2</button>
+            <button class="btn third" onclick="addnum('3')" id="btn">3</button>
+            <button class="btn third" onclick="addnum('-')" id="btn">-</button>
+            
+        </div>
+
+        <div class="btn">
+            <button class="btn third" onclick="addnum('0')" id="btn">0</button>
+            <button class="btn third" onclick="addnum('.')" id="btn">.</button>
+            
+            <button class="btn third" onclick="getresult()" id="btn">=</button>
+            
+            <button class="btn third" onclick="addnum('+')" id="btn">+</button>
+
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

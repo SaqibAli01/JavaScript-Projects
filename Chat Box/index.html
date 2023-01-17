@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section">
+        <div class="ChatBox">
+            <h1 class="name">Tamoor</h1>
+            <div class="sms_container ">
+                <table id="sms">
+
+                </table>
+                <table id="leftTable">
+                    <!-- <tr>
+                        <td>moon kya hal ha thk ho</td>
+                    </tr> -->
+                </table>
+            </div>
+            <input id="message1" placeholder="Text message" type="text" class="sms_box"><button onclick="sendL()" class="btn">Send</button></input>
+        </div>
+        <div class="ChatBox">
+            <h1 class="name">Saqib</h1>
+            <div class="sms_container">
+                <table id="rightTable">
+
+                </table>
+                <table id="smsR">
+                    <!-- <tr>
+                        <td>moon kya hal ha thk ho</td>
+                    </tr> -->
+                </table>
+            </div>
+
+            <input id="message2" placeholder="Text message" type="text" class="sms_box"><button onclick="sendR()" class="btn">Send</button></input>
+
+           
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

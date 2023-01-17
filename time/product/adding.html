@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+ .main{
+     border: 2px solid red;
+     text-align: center;
+     width: 400px;
+     margin:  auto;
+     height: 400px;
+     overflow: scroll;
+     padding: 20px;
+     position: relative;
+ }
+ .main .t{
+     position: fixed;
+     
+ }
+</style>
+</head>
+<body>
+
+    <div id="text"></div>
+    
+
+
+
+
+
+    <div class="main">
+        <div id="msg"></div >
+            <div class="t">
+            <input type="text" id="val">
+            <button onclick="send()">Send</button>
+        </div>
+</div>
+
+
+
+
+    <script>
+        function send(){
+            let val = document.getElementById('val');
+            let h = document.createElement('h1')  
+            let type = document.createTextNode(val.value);
+            // text ko ham ny div me rhak dia ha 
+            h.appendChild(type);
+            // send to div 
+            let msg = document.getElementById('msg');
+            msg.appendChild(h);
+            // ye empty input ho jy ga 
+            val.value = "";
+
+}
+
+// coding two 
+        // let p = document.createElement('p')
+        // let text = document.createTextNode("Saqib")
+        // p.appendChild(text)
+        // console.log(p) 
+
+        // let div = document.getElementById('text')
+        // let t = document.createTextNode('Saqib Ali')
+        // div.appendChild(t)
+
+
+
+    </script>
+
+
+</body>
+</html>

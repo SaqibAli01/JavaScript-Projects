@@ -1,0 +1,72 @@
+body{
+    /* background: black; */
+    text-align: center;
+}
+.main{
+    display: flex;
+    color: rgb(218, 3, 3);
+    width: 700px;
+    border: 2px solid red;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    margin: 5rem;
+    margin-left: 17%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    /* background: url('Water-Ripple-Effect-for-Images.mp4'); */
+    background-image: url('Water-Ripple-Effec.gif');
+    background-repeat: no-repeat;
+
+}
+.btn, .screen{
+    display: flex;
+    justify-content: center;
+font-size: 3rem;
+font-weight: 900;
+
+
+} 
+h2{
+    margin: 2rem;
+    padding: 1rem;
+    /* background-color: rgb(217, 230, 216); */
+    color: white;
+    width: 80px;
+    border: 3px solid rebeccapurple;
+    border-radius: 20px 0 20px 0;
+}
+h2:hover{
+    background-color: black;
+    color: white;
+}
+.btn button{
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border: 3px solid rebeccapurple;
+    border-radius: 20px 0 20px 0;
+}
+.btn button:hover{
+   background-color: aqua;
+}
+
+.otto {
+    background: #0e8dbc;
+    font-size: 5rem;
+    color: white;
+    margin-bottom: -10px;
+    text-shadow: 0 1px 0 #ccc,
+                 0 2px 0 #c9c9c9,
+                 0 3px 0 #bbb,
+                 0 4px 0 #b9b9b9,
+                 0 5px 0 #aaa,
+                 0 6px 1px rgba(0,0,0,.1),
+                 0 0 5px rgba(0,0,0,.1),
+                 0 1px 3px rgba(0,0,0,.3),
+                 0 3px 5px rgba(0,0,0,.2),
+                 0 5px 10px rgba(0,0,0,.25),
+                 0 10px 10px rgba(0,0,0,.2),
+                 0 20px 20px rgba(0,0,0,.15);
+  }

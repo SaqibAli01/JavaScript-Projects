@@ -1,0 +1,72 @@
+table{
+    /* width: 500px; */
+    border-collapse: collapse;
+    text-align: left;
+    overflow: hidden;
+    padding: 30px;
+    margin: 20px;
+    text-align: left;
+    margin: auto;
+    font-size: 2rem;
+
+    
+}
+#one{
+    background-color: rgb(3, 91, 116);
+    color: white;
+}
+
+input:checked {
+    height: 35px;
+    width: 35px;
+  }
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 2px solid #ddd;
+  }
+  
+  tr:hover {background-color: coral;}
+    
+  button{
+    font-size: 2rem;
+    background-color: gold;
+    border: 2px solid;
+    padding: 10px;
+    text-align: center;
+      
+      width: 100%;
+  }
+  button:hover{
+    background-color: green;
+    color: white;
+    font-weight: 300;
+  }
+.dish{
+    margin-left: 60px;
+    width: 25px;
+    height: 25px;
+}
+.qty{
+  width: 70px;
+  text-align: center;
+  padding: 3px;
+  margin: 3px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: brown;
+}
+span{
+  color:  red;
+}
+.header{
+  background-color: yellow;
+  text-align: center;
+  padding: 10px;
+  color: tomato;
+}
+
+.header:hover{
+  background-color: green;
+  color: aqua;
+}

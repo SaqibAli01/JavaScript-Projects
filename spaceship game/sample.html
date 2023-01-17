@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #myApp{
+            position: relative;
+            width:800px;
+            overflow: hidden;
+            height: 600px;
+            background-image: url(space-back.jpg);
+        }
+
+        #player{
+            position: absolute;
+            width: 100px;;
+        }
+
+        .fire{
+            width:25px;
+            position: absolute;
+        }
+
+        .asteroid{
+            width: 100px;
+            position: absolute;
+        }
+
+        .destroyed{
+            position: absolute;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="myApp">
+
+        <img id="player" src="ship.png" alt="">
+
+    </div>
+
+    <script>
+
+        let score = 0;
+
+        let fireSound =  document.createElement('audio');
+        fireSound.src = "fire.mp3";
+
+        setInterval(()=>{
+
+
+            let asteroid = document.createElement('img');
+            asteroid.src = "asteroid.png";
+            asteroid.className = "asteroid";
+            asteroid.style.left = Math.random() * myApp.offsetWidth + 'px'; 
+            myApp.appendChild(asteroid);
+
+            asteroid.iskaInterval =  setInterval(()=>{
+
+                asteroid.style.top = (asteroid.offsetTop + 1) +'px'  ;
+
+                let mainBottom = myApp.offsetTop + myApp.offsetHeight;
+
+                if(asteroid.offsetTop > mainBottom){
+
+                    
+                    asteroid.remove();
+                    clearInterval(asteroid.iskaInterval);
+                }
+
+            }, 10)
+
+
+        }, 1000)
+
+        document.body.onkeydown = function(myEvent){
+
+            switch(myEvent.keyCode){
+
+                case 32:
+
+                    let fire = document.createElement('img');
+                    fire.src = "missile.png";
+                    fire.className = "fire";
+
+                    fire.style.top = player.offsetTop + 'px';
+                    fire.style.left = (player.offsetLeft+ 50) + 'px';
+
+                    document.body.appendChild(fire);
+
+
+                   let firingInterval =  setInterval(()=>{
+                    
+                        fire.style.top = (fire.offsetTop - 1) + 'px';
+
+                        if((fire.offsetTop + fire.offsetHeight) < 0){
+                            fire.remove();
+                            clearInterval(firingInterval);
+                            return;
+                        }
+
+                        let allAsteroids = document.querySelectorAll('.asteroid')
+
+
+                        for(let asteroid of allAsteroids){
+
+                            let asteroidBottom = asteroid.offsetTop + asteroid.offsetHeight;
+                            let fireRight = fire.offsetLeft + fire.offsetWidth;
+                            let asteroidRight = asteroid.offsetLeft + asteroid.offsetWidth;
+                            // fire.offsetTop < asteroid.offsetTop &&
+                            if(fire.offsetTop < asteroidBottom && fire.offsetLeft > asteroid.offsetLeft && fireRight < asteroidRight)
+                            {
+                                console.log("good hogya");
+                                fire.remove();
+                                
+                                let desoroyedIMG =  document.createElement('img');
+                                desoroyedIMG.src = "destroyed.gif";
+                                desoroyedIMG.className = "destroyed";
+                                myApp.appendChild(desoroyedIMG);
+                                desoroyedIMG.width = 100;
+                                desoroyedIMG.style.left = asteroid.offsetLeft + 'px';
+                                desoroyedIMG.style.top = asteroid.offsetTop + 'px';
+                                
+                                setTimeout(()=>{
+
+                                    desoroyedIMG.remove();
+                                }, 500)
+
+                                asteroid.remove();
+
+
+                                fireSound.currentTime = 0;
+                                fireSound.play();
+                                clearInterval(asteroid.iskaInterval);
+                                clearInterval(firingInterval);
+                            }
+
+                        }
+
+
+
+                    },0)
+
+                    console.log("fire, thah")
+                break;
+
+                case 37:
+
+                player.style.left = (player.offsetLeft - 5) + 'px';
+
+                    console.log("left jara");
+                    break;
+
+                    case 38:
+                player.style.top = (player.offsetTop - 5) + 'px';
+
+                    console.log("top ");
+                    break;
+
+                    case 39:
+                    console.log("right jara");
+                player.style.left = (player.offsetLeft + 5) + 'px';
+                    
+                    break;
+
+                    case 40:
+                    console.log("neeche jara");
+                player.style.top = (player.offsetTop + 5) + 'px';
+
+                    break;
+
+            }
+
+            console.log(myEvent.keyCode)
+
+        }
+
+    </script>
+    
+</body>
+</html>

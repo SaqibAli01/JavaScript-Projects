@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 80px;
+    
+}
+.ChatBox{
+    width: 400px;
+    height: 500px;
+    border: 2px solid gainsboro;
+    border-radius: 10px ;
+    /* display: flex;
+    justify-content: center; */
+    position: relative;
+    background-color: darkgray;
+    /* background-color: rgb(144, 137, 137); */
+}
+.sms_box{
+    position: absolute;
+    bottom: 10px;
+    width: 365px;
+    height: 50px;
+    border: 2px solid gainsboro;
+    border-radius: 20px ;
+    left: 6px;
+    padding: 0 10px;
+    font-size: 1.5rem;
+}
+.btn{
+    position: absolute;
+    bottom: 15px;
+    width: 100px;
+    height: 45px;
+    border: 2px solid gainsboro;
+    border-radius: 20px ;
+    right: 8px;
+    padding: 0 10px;
+    border-style: none;
+    font-size: 1.5rem;
+    background-color: darkgray;
+}
+.btn:hover{
+    background:linear-gradient(
+        #8360c3,
+        #2ebf91);
+        cursor: pointer;
+}
+.sms_container{
+    position: absolute;
+    top: 70px;
+    width: 380px;
+    height: 360px;
+    /* border: 2px solid black; */
+    padding: 0 10px;
+    background-color: darkgray;
+    font-size: 1.5rem;
+}
+.name{
+    text-align: center;
+    /* margin-top: .5rem; */
+    background:linear-gradient(
+        #8360c3,
+        #2ebf91);
+    border-radius: 10px 10px 0 0;
+    padding: 1rem 0;
+}
+.smsL_td{
+    border: 1px solid black;
+    background:linear-gradient(
+        #8360c3,
+        #2ebf91) ;
+        width: 200px;
+    border-radius: 15px;
+    padding: .3rem .5rem ;
+
+}
+.smsR_td{
+    border: 1px solid black;
+    background:linear-gradient(
+        #dd831c, #e52e71) ;
+        width: 200px;
+    border-radius: 15px;
+    padding: .3rem .5rem ;
+}
+#sms {
+    margin-left: 188px;
+    
+}
+#smsR {
+    margin-left: 188px;
+    
+}
+#rightTable {
+    margin-left: 0px;
+    
+}
+#leftTable {
+    margin-left: 0px;
+    
+}
